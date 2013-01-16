@@ -15,7 +15,7 @@ require 'spec_helper'
 			let(:page_title) { '' }
 
 			it_should_behave_like "all static pages"
-			it { should_not have_selector('title', text: '| Home') }
+			#it { should_not have_selector('title', text: full_title('Home')) }
 		end
 		describe "Help page" do
 			before { visit help_path }
@@ -23,7 +23,7 @@ require 'spec_helper'
 			let(:page_title) { 'Help' }
 
 			it_should_behave_like "all static pages"
-			it { should_not have_selector('title', text: '| Help') }
+			#it { should_not have_selector('title', text: full_title('Help')) }
 		end
 		describe "About page" do
 			before { visit about_path }
@@ -31,7 +31,7 @@ require 'spec_helper'
 			let(:page_title) { 'About' }
 
 			it_should_behave_like "all static pages"
-			it { should_not have_selector('title', text: '| About Us') }
+			#it { should_not have_selector('title', text: full_title('About Us')) }
 		end
 		describe "Contact page" do
 			before { visit contact_path }
@@ -39,7 +39,7 @@ require 'spec_helper'
 			let(:page_title) { 'Contact' }
 
 			it_should_behave_like "all static pages"
-			it { should_not have_selector('title', text: '| Contact') }
+			#it { should_not have_selector('title', text: full_title('Contact')) }
 		end
 
 	it "should have the right links on the layout" do
